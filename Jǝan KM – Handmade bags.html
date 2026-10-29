@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jǝan KM – Handmade bags</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;1,6..96,400&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f2f1ed; --ink:#1c1b19; --muted:#6a675f; --line:#d4d1c8; --stage:#e4e2da;
+  --accent:#254238; --accent-ink:#f2f1ed; --pop:#d9a21b;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#171815; --ink:#efede6; --muted:#a09d93; --line:#34332e; --stage:#23241f;
+    --accent:#e9c25a; --accent-ink:#171815; --pop:#e9c25a;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#171815; --ink:#efede6; --muted:#a09d93; --line:#34332e; --stage:#23241f;
+  --accent:#e9c25a; --accent-ink:#171815; --pop:#e9c25a;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.05rem/1.65 Jost,system-ui,sans-serif}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--pop);outline-offset:3px}
+.wrap{max-width:74rem;margin:0 auto;padding:0 1.5rem}
+.bar{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 0;border-bottom:1px solid var(--line)}
+.logo{font:italic 400 1.5rem "Bodoni Moda",serif;text-decoration:none}
+.bar nav a{margin-left:1.5rem;text-decoration:none;color:var(--muted)}
+.bar nav a:hover{color:var(--ink)}
+.hero{display:grid;grid-template-columns:1.2fr 1fr;gap:3rem;align-items:center;padding:4rem 0 5rem}
+h1{font:400 clamp(3rem,8vw,6.5rem)/.95 "Bodoni Moda",serif;letter-spacing:-.02em;margin:0 0 1.5rem}
+.lede{font-size:1.2rem;color:var(--muted);max-width:28rem;margin:0 0 2rem}
+.btn{display:inline-block;padding:.85rem 1.6rem;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:500;border:2px solid var(--accent)}
+.btn.line{background:none;color:var(--ink);border-color:var(--ink)}
+.btn:hover{filter:brightness(1.12)}
+.stage{background:var(--stage);aspect-ratio:4/5;width:100%;overflow:hidden}
+.stage svg{display:block;width:100%;height:100%}
+h2{font:400 clamp(2rem,4vw,3rem)/1.1 "Bodoni Moda",serif;margin:0 0 .5rem}
+.intro{color:var(--muted);max-width:34rem;margin:0 0 3rem}
+.bag{display:grid;grid-template-columns:1.15fr 1fr;gap:3.5rem;align-items:center;padding:3rem 0;border-top:1px solid var(--line)}
+.bag.rev .gal{order:2}
+.thumbs{display:grid;grid-template-columns:repeat(5,1fr);gap:.5rem;margin-top:.5rem}
+.thumbs button{all:unset;cursor:pointer;display:block;text-align:center;font-size:.85rem;color:var(--muted);padding-bottom:.35rem;border-bottom:2px solid transparent}
+.thumbs button[aria-pressed="true"]{color:var(--ink);border-color:var(--ink)}
+.thumbs .stage{aspect-ratio:1;margin-bottom:.35rem}
+.thumbs button:focus-visible{outline:3px solid var(--pop);outline-offset:2px}
+.info h3{font:400 2.4rem/1.1 "Bodoni Moda",serif;margin:0 0 .75rem}
+.info p{margin:0 0 1.25rem;max-width:26rem}
+.info dl{margin:0 0 1.75rem;border-top:1px solid var(--line)}
+.info dl div{display:flex;justify-content:space-between;gap:1rem;padding:.6rem 0;border-bottom:1px solid var(--line)}
+.info dt{color:var(--muted)}.info dd{margin:0;text-align:right}
+.price{font-style:italic;font-family:"Bodoni Moda",serif;margin-bottom:.75rem;display:block}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:3rem;padding:4rem 0;border-top:1px solid var(--line)}
+.about p{margin:0 0 1rem;max-width:32rem}
+.contact{padding:5rem 0;border-top:1px solid var(--line);text-align:center}
+.contact p{max-width:30rem;margin:0 auto 2rem;color:var(--muted)}
+footer{padding:1.5rem 0 3rem;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+@media (max-width:50rem){
+  .hero,.bag,.about{grid-template-columns:1fr;gap:2rem}
+  .bag.rev .gal{order:0}
+  .bar nav a{margin-left:1rem}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="bar">
+    <a class="logo" href="#top">Jǝan KM</a>
+    <nav><a href="#collection">Collection</a><a href="#maker">Maker</a><a href="#contact">Contact</a></nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div>
+        <h1>Bags made by hand, one at a time.</h1>
+        <p class="lede">Small-batch bags cut and sewn from fabrics chosen for how they feel and age. Every piece is made once and never repeated.</p>
+        <a class="btn" href="#collection">View the collection</a>
+      </div>
+      <div class="stage" id="heroStage" role="img" aria-label="Illustration of the Nonna tote bag"></div>
+    </section>
+
+    <section id="collection">
+      <h2>The collection</h2>
+      <p class="intro">Each bag is shown from five angles. Prices are shared privately, so send me a message on Instagram to ask.</p>
+      <div id="bags"></div>
+    </section>
+
+    <section class="about" id="maker">
+      <div><h2>About the maker</h2></div>
+      <div>
+        <p>I design and sew every bag myself, starting with the fabric. I look for natural fibres with character: linen that softens, wool with texture, cotton velvet that catches the light.</p>
+        <p>Replace this text with your own story: where you learned to sew, how you choose fabrics, and how long each bag takes to make.</p>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2>Ask about a bag</h2>
+      <p>I don’t list prices online. Message me on Instagram with the name of the bag you like and I’ll reply with the price and availability.</p>
+      <a class="btn" href="https://ig.me/m/jeanleepong" target="_blank" rel="noopener">Message @jeanleepong</a>
+    </section>
+  </main>
+
+  <footer><span>© 2026 Jǝan KM</span><a href="https://instagram.com/jeanleepong" target="_blank" rel="noopener">Instagram</a></footer>
+</div>
+
+<script>
+/* To use real photos, replace a view's `src` with an image data URI.
+   Views with an empty `src` show an illustration. */
+var VIEWS=["Front","Side","Back","Inside","Detail"];
+var BAGS=[
+ {name:"Nonna",type:"Tote bag",blurb:"A roomy everyday tote in hand-dyed linen, with a saffron lining that shows when you open it.",fabric:"Linen, forest green",size:"40 × 35 × 14 cm",closure:"Magnetic snap",c:"#2f5a4a",d:"#1c3a2f",l:"#e0b13c"},
+ {name:"Sera",type:"Shoulder bag",blurb:"A soft evening bag in cotton velvet, cut close to the body with a single zip pocket on the back.",fabric:"Cotton velvet, rose",size:"28 × 20 × 8 cm",closure:"Zip",c:"#c9877a",d:"#9a5d52",l:"#f1e4d4"},
+ {name:"Cornice",type:"Crossbody bag",blurb:"A structured crossbody in wool tweed with an adjustable strap and a lining in pale lavender.",fabric:"Wool tweed, indigo",size:"24 × 18 × 9 cm",closure:"Flap and buckle",c:"#3b3f6b",d:"#25284a",l:"#d9d4ea"}
+];
+BAGS.forEach(function(b){b.views=VIEWS.map(function(v){return{label:v,src:""}})});
+
+function art(b,vi,id){
+  var c=b.c,d=b.d,l=b.l,s='<svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">';
+  var v=VIEWS[vi];
+  function handles(x,w){return '<path d="M'+(x+w*.25)+' 200C'+(x+w*.25)+' 80 '+(x+w*.75)+' 80 '+(x+w*.75)+' 200" fill="none" stroke="'+d+'" stroke-width="14" stroke-linecap="round"/>';}
+  if(v==="Detail"){
+    s+='<defs><pattern id="w'+id+'" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="14" height="14" fill="'+c+'"/><rect width="7" height="14" fill="'+d+'" opacity=".35"/></pattern></defs>';
+    s+='<rect width="400" height="500" fill="url(#w'+id+')"/><rect y="230" width="400" height="40" fill="'+d+'" opacity=".55"/><line x1="0" y1="250" x2="400" y2="250" stroke="'+l+'" stroke-width="4" stroke-dasharray="14 10"/>';
+    return s+'</svg>';
+  }
+  var x=v==="Side"?140:90,w=v==="Side"?120:220;
+  s+='<ellipse cx="200" cy="440" rx="'+(w/2+30)+'" ry="14" fill="#000" opacity=".12"/>';
+  s+=handles(x,w);
+  s+='<rect x="'+x+'" y="190" width="'+w+'" height="240" rx="14" fill="'+c+'"/>';
+  if(v==="Inside"){
+    s+='<ellipse cx="'+(x+w/2)+'" cy="192" rx="'+(w/2)+'" ry="22" fill="'+l+'"/><ellipse cx="'+(x+w/2)+'" cy="198" rx="'+(w/2-14)+'" ry="14" fill="'+d+'" opacity=".4"/>';
+  }else if(v==="Back"){
+    s+='<rect x="'+(x+30)+'" y="230" width="'+(w-60)+'" height="90" rx="8" fill="none" stroke="'+d+'" stroke-width="3"/><line x1="'+(x+30)+'" y1="250" x2="'+(x+w-30)+'" y2="250" stroke="'+l+'" stroke-width="3" stroke-dasharray="6 5"/>';
+  }else if(v==="Side"){
+    s+='<line x1="'+(x+w/2)+'" y1="200" x2="'+(x+w/2)+'" y2="425" stroke="'+d+'" stroke-width="3" stroke-dasharray="8 6"/>';
+  }else{
+    s+='<rect x="'+(x+12)+'" y="202" width="'+(w-24)+'" height="216" rx="8" fill="none" stroke="'+l+'" stroke-width="2.5" stroke-dasharray="8 6"/><rect x="'+(x+w/2-18)+'" y="340" width="36" height="14" fill="'+l+'"/>';
+  }
+  return s+'</svg>';
+}
+
+var uid=0;
+function view(b,vi){
+  var id=++uid,src=b.views[vi].src;
+  return src?'<img src="'+src+'" alt="'+b.name+' – '+VIEWS[vi]+'" style="width:100%;height:100%;object-fit:cover">':art(b,vi,id);
+}
+
+document.getElementById("heroStage").innerHTML=view(BAGS[0],0);
+
+var host=document.getElementById("bags");
+BAGS.forEach(function(b,i){
+  var a=document.createElement("article");
+  a.className="bag"+(i%2?" rev":"");
+  a.innerHTML=
+   '<div class="gal"><div class="stage" role="img" aria-live="polite"></div><div class="thumbs"></div></div>'+
+   '<div class="info"><h3>'+b.name+'</h3><p>'+b.blurb+'</p>'+
+   '<dl><div><dt>Type</dt><dd>'+b.type+'</dd></div><div><dt>Fabric</dt><dd>'+b.fabric+'</dd></div><div><dt>Size</dt><dd>'+b.size+'</dd></div><div><dt>Closure</dt><dd>'+b.closure+'</dd></div></dl>'+
+   '<span class="price">Price on request</span>'+
+   '<a class="btn line" href="https://ig.me/m/jeanleepong" target="_blank" rel="noopener">Ask about '+b.name+' on Instagram</a></div>';
+  var stage=a.querySelector(".stage"),thumbs=a.querySelector(".thumbs");
+  function show(vi){
+    stage.innerHTML=view(b,vi);
+    stage.setAttribute("aria-label",b.name+", "+VIEWS[vi].toLowerCase()+" view");
+    thumbs.querySelectorAll("button").forEach(function(t,k){t.setAttribute("aria-pressed",k===vi)});
+  }
+  VIEWS.forEach(function(name,vi){
+    var t=document.createElement("button");
+    t.innerHTML='<div class="stage">'+view(b,vi)+'</div>'+name;
+    t.setAttribute("aria-label",b.name+" "+name+" view");
+    t.onclick=function(){show(vi)};
+    thumbs.appendChild(t);
+  });
+  host.appendChild(a);
+  show(0);
+});
+</script>
+</body>
+</html>
